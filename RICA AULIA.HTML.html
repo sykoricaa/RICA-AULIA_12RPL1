@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Pendaftaran Acara</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f5; /* Warna latar belakang utama */
+    }
+
+    header {
+      background-color: #be67a1; /* Warna utama */
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #f8e6f2;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #be67a1;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      background-color: #be67a1;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a14d88;
+    }
+
+    select option[disabled] {
+      color: #aaa;
+    }
+
+    footer {
+      background-color: #be67a1;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      width: 100%;
+      margin-top: auto;
+    }
+
+    @media(max-width: 600px) {
+      form {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      header p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Formulir Pendaftaran Acara</h1>
+    <p>Silakan isi data lengkap untuk mengikuti acara</p>
+  </header>
+
+  <div class="wrapper">
+    <form action="" method="POST">
+      <h2>Formulir Pendaftaran</h2>
+
+      <label>Nama Lengkap</label>
+      <input type="text" name="nama_lengkap" required>
+
+      <label>Usia</label>
+      <input type="number" name="usia" required>
+
+      <label>Alamat Email</label>
+      <input type="email" name="email" required>
+
+      <label>No. Telepon / WhatsApp</label>
+      <input type="number" name="telepon" required>
+
+      <label>Jenis Kelamin</label>
+      <select name="jenis_kelamin" required>
+        <option disabled selected>Pilih</option>
+        <option value="Perempuan">Perempuan</option>
+        <option value="Laki-Laki">Laki-Laki</option>
+      </select>
+
+      <label>Acara yang Diikuti</label>
+      <select name="acara" required>
+        <option disabled selected>Pilih</option>
+        <option value="Seminar Teknologi">Seminar Teknologi</option>
+        <option value="Workshop Kewirausahaan">Workshop Kewirausahaan</option>
+        <option value="Pelatihan Desain Grafis">Pelatihan Desain Grafis</option>
+      </select>
+
+      <label>Alasan Mengikuti Acara</label>
+      <textarea name="alasan" rows="4" required></textarea>
+
+      <button type="submit" name="submit">Daftar Sekarang</button>
+    </form>
+
+    <footer>
+      &copy;2025 Rica Aulia Agustin
+    </footer>
+  </div>
+
+</body>
+</html>
